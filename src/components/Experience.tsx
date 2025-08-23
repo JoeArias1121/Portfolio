@@ -16,7 +16,6 @@ export default function Experience({
   description,
   icons,
 }: Props) {
-
   const descriptionList = description.map((item, index) => (
     <li key={index} className="">
       {item}
@@ -34,6 +33,16 @@ export default function Experience({
       </div>
       {description.length > 0 && (
         <ul className="list-disc pl-5">{descriptionList}</ul>
+      )}
+      {icons && (
+        <div className="flex gap-2">
+          <p>Used:</p>
+          <div className="flex gap-2">
+            {icons.map((Icon, index) => (
+              <Icon key={index} className="w-auto h-8" />
+            ))}
+          </div>
+        </div>
       )}
     </div>
   );
