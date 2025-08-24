@@ -1,20 +1,48 @@
-import { } from "react";
-import { SiHtml5, SiCss3, SiNextdotjs, SiReact, SiJavascript, SiVuedotjs, SiExpress, SiTailwindcss, SiPrisma, SiTypescript, SiSupabase, SiPostgresql, SiShadcnui } from "react-icons/si";
-import Experience from '../../components/Experience';
-import Project from '../../components/Project';
+import {} from "react";
+import {
+  SiHtml5,
+  SiCss3,
+  SiNextdotjs,
+  SiReact,
+  SiJavascript,
+  SiVuedotjs,
+  SiExpress,
+  SiTailwindcss,
+  SiPrisma,
+  SiTypescript,
+  SiSupabase,
+  SiPostgresql,
+  SiShadcnui,
+  SiPhp,
+  SiMysql,
+} from "react-icons/si";
+import Experience from "../../components/Experience";
+import Project from "../../components/Project";
+import PicOfMe from "../../assets/PicOfMe.jpg";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center bg-amber-400">
-      <p>
-        Hi! I'm Joseph, a software engineer <br />
-        with experience building full-stack applications. <br />
-        I have a desire to create impactful software <br />
-        that solves real-world problems.
-      </p>
+    <div className="flex flex-col justify-center items-center w-3/4 bg-amber-400">
+      <div className="flex justify-center items-center gap-4 p-4 w-1/1">
+        <div className="flex justify-end w-1/2 bg-violet-400">
+          <img
+            src={PicOfMe}
+            alt="Picture of Joseph"
+            className="w-48 rounded-t-full"
+          />
+        </div>
+        <div className="flex justify-start w-1/2 bg-green-300">
+          <p>
+            Hi! I'm Joseph, a software engineer <br />
+            with experience building full-stack applications. <br />
+            I have a desire to create impactful software <br />
+            that solves real-world problems.
+          </p>
+        </div>
+      </div>
       <p className="text-3xl">Experience</p>
       <Experience
-        title={"Software Engineer"}
+        title={"Software Engineer Intern"}
         company={"Phoenix Bioinformatics"}
         date={"Feb 2024 - Aug 2024"}
         description={[
@@ -46,7 +74,40 @@ export default function About() {
           "Designed responsive UI components with React and Tailwind",
           "Modeled data relationships using Prisma and integrated backend with Supabase",
         ]}
-        icons={[SiNextdotjs, SiReact, SiJavascript, SiTailwindcss, SiPrisma, SiSupabase, SiPostgresql, SiShadcnui, SiTypescript]}
+        icons={[
+          SiNextdotjs,
+          SiReact,
+          SiJavascript,
+          SiTailwindcss,
+          SiPrisma,
+          SiSupabase,
+          SiPostgresql,
+          SiShadcnui,
+          SiTypescript,
+        ]}
+      />
+      <Project
+        name={"Workflow App"}
+        description={
+          "Facilitates task and project management by allowing users to create tasks for projects and assign them to others"
+        }
+        contributions={[
+          "Rebuilt backend logic and ensured data integrity through updated SQL schema",
+          "Implemented asynchronous user interactions using JavaScript promises",
+          "Reintroduced a removed feature and ensured compatibility with legacy code",
+        ]}
+        icons={[SiHtml5, SiCss3, SiJavascript, SiPhp, SiMysql]}
+      />
+      <Project
+        name={"ReTry"}
+        description={
+          "Is a video game where the user has to jump up onto higher platforms and avoid falling too low. It does have a few twists though!"
+        }
+        contributions={[
+          "Managed project scope by prioritizing core features and iterating from initial concept to minimum viable product within time constraints",
+          "Conducted user testing sessions with multiple playtesters to gather feedback on gameplay mechanics, difficulty balance, and overall user experience",
+          "Created game assets including level designs, collision systems, and interactive object behaviors to deliver a complete playable experience",
+        ]}
       />
     </div>
   );

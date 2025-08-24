@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="">
       <p>Home</p>
-      <About />
+      <div className="flex justify-center">
+        <About />
+      </div>
     </div>
   );
 }

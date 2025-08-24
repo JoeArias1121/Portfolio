@@ -23,7 +23,7 @@ export default function Experience({
   ));
 
   return (
-    <div className="w-1/1 bg-pink-600">
+    <div className="flex flex-col w-1/1 bg-pink-600">
       <div className="flex justify-between bg-amber-800 w-1/1">
         <div className="flex flex-col  items-start">
           <p>{title}</p>
@@ -31,9 +31,7 @@ export default function Experience({
         </div>
         <p>{date}</p>
       </div>
-      {description.length > 0 && (
-        <ul className="list-disc pl-5">{descriptionList}</ul>
-      )}
+      {description.length > 0 && <p>{descriptionList}</p>}
       {icons && (
         <div className="flex gap-2">
           <p>Used:</p>
