@@ -22,16 +22,16 @@ import PicOfMe from "../../assets/PicOfMe.jpg";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center w-3/4 bg-amber-400">
+    <div className="flex flex-col justify-center items-center w-3/4">
       <div className="flex justify-center items-center gap-4 p-4 w-1/1">
-        <div className="flex justify-end w-1/2 bg-violet-400">
+        <div className="flex justify-end w-1/2">
           <img
             src={PicOfMe}
             alt="Picture of Joseph"
             className="w-48 rounded-t-full"
           />
         </div>
-        <div className="flex justify-start w-1/2 bg-green-300">
+        <div className="flex justify-start w-1/2">
           <p>
             Hi! I'm Joseph, a software engineer <br />
             with experience building full-stack applications. <br />
@@ -40,7 +40,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <p className="text-3xl">Experience</p>
+      <p className="text-4xl py-3">Experience</p>
       <Experience
         title={"Software Engineer Intern"}
         company={"Phoenix Bioinformatics"}
@@ -63,7 +63,7 @@ export default function About() {
           "Coordinated with faculty to align session goals with course progress",
         ]}
       />
-      <p className="text-3xl">Projects</p>
+      <p className="text-4xl py-3">Projects</p>
       <Project
         name={"Notaibly"}
         description={
