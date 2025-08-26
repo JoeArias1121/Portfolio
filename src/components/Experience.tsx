@@ -37,7 +37,7 @@ export default function Experience({
       {icons && (
         <div className="flex gap-2 py-4">
           <p className="text-xl">Used:</p>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             {icons.map((Icon, index) => (
               <Icon
                 key={index}
