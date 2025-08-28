@@ -6,7 +6,6 @@ function App() {
 
   return (
     <div className="">
-      <p>Home</p>
       <div className="flex justify-center">
         <About />
       </div>

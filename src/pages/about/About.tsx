@@ -22,10 +22,11 @@ import { FaFileDownload } from "react-icons/fa";
 import Experience from "../../components/Experience";
 import Project from "../../components/Project";
 import PicOfMe from "../../assets/PicOfMe.jpg";
+import { Card } from "../../components/ui/card";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center w-1/2">
+    <div className="flex flex-col justify-center items-center w-11/12 sm:w-3/4 lg:w-1/2 xl:w-1/2 xl:max-w-2xl">
       <div className="flex flex-col sm:flex-row justify-center items-center gap-10 p-4 w-1/1">
         <div className="flex justify-end w-1/2">
           <img
@@ -36,9 +37,9 @@ export default function About() {
         </div>
         <div className="flex flex-col justify-start w-full sm:w-1/2 h-1/1">
           <div className="flex pb-3 sm:pb-0 items-end h-2/3">
-            <p className="w-full lg:w-3/4 text-xl text-center sm:text-left">
-              Hi! I'm Joseph, a software engineer from New York City 
-              with experience building full-stack applications.
+            <p className="w-full text-xl text-center sm:text-left">
+              Hi! I'm Joseph, a software engineer from New York City with
+              experience building full-stack applications.
             </p>
           </div>
           <div className="flex items-center gap-3 h-1/3">
@@ -65,7 +66,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex align-center gap-2 bg-gray-700 p-1 rounded-2xl">
+      <div className="flex align-center gap-2 bg-gray-700 p-1 mb-5 rounded-2xl">
         <div className="w-1/2 cursor-pointer bg-black py-2 px-20 rounded-2xl">
           <p>Work</p>
         </div>
@@ -73,19 +74,19 @@ export default function About() {
           <p>Education</p>
         </div>
       </div>
-      <p className="text-4xl py-3">Experience</p>
-      <Experience
-        title={"Software Engineer Intern"}
-        company={"Phoenix Bioinformatics"}
-        date={"Feb 2024 - Aug 2024"}
-        description={[
-          "Built dynamic web pages using Vue, Pinia, and TypeScript by managing state and making server-side requests to render interactive, data-driven interfaces",
-          "Implemented backend logic using Sequelize to manage and process user data",
-          "Leveraged Express.js and MySQL to query the database and satisfy requests made by the client",
-          "Owned feature development from start to finish, engaging with a tech lead for PR feedback and technical alignment in an informal agile setting",
-        ]}
-        icons={[SiHtml5, SiCss3, SiVuedotjs, SiExpress, SiJavascript]}
-      />
+      <Card className="text-white p-2">
+        <Experience
+          title={"Software Engineer Intern"}
+          company={"Phoenix Bioinformatics"}
+          date={"Feb 2024 - Aug 2024"}
+          description={[
+            "Built dynamic web pages using Vue, Pinia, and TypeScript by managing state and making server-side requests to render interactive, data-driven interfaces",
+            "Implemented backend logic using Sequelize to manage and process user data",
+            "Leveraged Express.js and MySQL to query the database and satisfy requests made by the client",
+            "Owned feature development from start to finish, engaging with a tech lead for PR feedback and technical alignment in an informal agile setting",
+          ]}
+          icons={[SiHtml5, SiCss3, SiVuedotjs, SiExpress, SiJavascript]}
+        />
       <Experience
         title={"Supplemental Instruction Leader"}
         company={"SUNY New Paltz - Center for Student Success"}
@@ -95,7 +96,8 @@ export default function About() {
           "Developed study materials and walkthroughs based on real assessments",
           "Coordinated with faculty to align session goals with course progress",
         ]}
-      />
+        />
+        </Card>
       <p className="text-4xl py-3">Projects</p>
       <Project
         name={"Notaibly"}
