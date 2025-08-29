@@ -2,6 +2,7 @@ import {} from "react";
 import type { IconType } from "react-icons";
 
 type Props = {
+  className?: string;
   title: string;
   company: string;
   date: string;
@@ -15,6 +16,7 @@ export default function Experience({
   date,
   description,
   icons,
+  className = "",
 }: Props) {
   const descriptionList = description.map((item, index) => (
     <li key={index} className="">
@@ -23,7 +25,7 @@ export default function Experience({
   ));
 
   return (
-    <div className="flex flex-col w-1/1">
+    <div className={`flex flex-col w-1/1 ${className}`}>
       <div className="flex justify-between py-2">
         <div className="flex flex-col items-start">
           <p className="text-3xl">{title}</p>
