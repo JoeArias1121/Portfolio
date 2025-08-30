@@ -1,11 +1,11 @@
-
 type Props = {
   className?: string;
+  eduRef?: React.Ref<HTMLDivElement | null>;
 }
 
-export default function Education({className = ""}: Props) {
+export default function Education({className = "", eduRef = null}: Props) {
   return (
-    <div className={`flex flex-col w-1/1 ${className}`}>
+    <div ref={ eduRef } className={`flex flex-col w-1/1 ${className}`}>
       <div className="flex justify-between py-2">
         <div className="flex flex-col items-start">
           <p className="text-3xl">State University of New York at New Paltz</p>

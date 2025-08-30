@@ -34,7 +34,7 @@ export default function Experience({
         <p>{date}</p>
       </div>
       <div>
-        <ul className="list-disc p-4 list-inside">{descriptionList}</ul>
+        <ul className="list-disc pl-4 list-inside">{descriptionList}</ul>
       </div>
       {icons && (
         <div className="flex gap-2 py-4">
