@@ -28,8 +28,8 @@ export default function Experience({
     <div className={`flex flex-col w-1/1 ${className}`}>
       <div className="flex justify-between py-2">
         <div className="flex flex-col items-start">
-          <p className="text-3xl">{title}</p>
-          <p className="text-xl">{company}</p>
+          <p className="text-xl">{title}</p>
+          <p className="font-bold">@ {company}</p>
         </div>
         <p>{date}</p>
       </div>
@@ -43,7 +43,7 @@ export default function Experience({
             {icons.map((Icon, index) => (
               <Icon
                 key={index}
-                className="w-auto h-8 cursor-pointer transition-all duration-200 ease-in-out hover:scale-140 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-115"
+                className="w-auto h-6 cursor-pointer transition-all duration-200 ease-in-out hover:scale-140 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-115"
               />
             ))}
           </div>

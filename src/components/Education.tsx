@@ -8,7 +8,7 @@ export default function Education({className = "", eduRef = null}: Props) {
     <div ref={ eduRef } className={`flex flex-col w-1/1 ${className}`}>
       <div className="flex justify-between py-2">
         <div className="flex flex-col items-start">
-          <p className="text-3xl">State University of New York at New Paltz</p>
+          <p className="text-2xl">State University of New York at New Paltz</p>
           <p className="text-xl">Bachelor of Science in Computer Science</p>
         </div>
         <p>Aug 2021 - Dec 2024</p>

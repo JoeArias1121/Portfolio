@@ -4,7 +4,7 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export default function Intro() {
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 p-4 w-1/1">
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-10 p-5 w-1/1">
       <div className="flex justify-end w-1/2">
         <img
           src={PicOfMe}
