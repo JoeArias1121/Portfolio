@@ -1,4 +1,4 @@
-import PicOfMe from "@/assets/picOfMe.jpg";
+import picOfMe from "@/assets/picOfMe.jpg";
 import { FaFileDownload } from "react-icons/fa";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
@@ -7,7 +7,7 @@ export default function Intro() {
     <div className="flex flex-col sm:flex-row justify-center items-center gap-10 p-5 w-1/1">
       <div className="flex justify-center sm:justify-end w-1/2">
         <img
-          src={PicOfMe}
+          src={picOfMe}
           alt="Picture of Joseph"
           className="w-48 rounded-t-full"
         />
