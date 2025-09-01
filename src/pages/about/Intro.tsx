@@ -1,4 +1,4 @@
-import picOfMe from "@/assets/picOfMe.jpg";
+import picOfMe from "@/assets/picofme.jpg";
 import { FaFileDownload } from "react-icons/fa";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
