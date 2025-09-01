@@ -26,29 +26,31 @@ export default function Experience({
 
   return (
     <div className={`flex flex-col w-1/1 ${className}`}>
-      <div className="flex justify-between py-2">
+      <div className="flex flex-col xl:flex-row xl:justify-between">
         <div className="flex flex-col items-start">
           <p className="text-xl">{title}</p>
           <p className="font-bold">@ {company}</p>
         </div>
         <p>{date}</p>
       </div>
+      <div className="ml-3">
       <div>
-        <ul className="list-disc pl-4 list-inside">{descriptionList}</ul>
+        <ul className="list-disc p-2 list-inside">{descriptionList}</ul>
       </div>
       {icons && (
-        <div className="flex gap-2 py-4">
-          <p className="text-xl">Used:</p>
-          <div className="flex gap-3">
+        <div className="flex items-center gap-2">
+          <p className="font-bold">Used:</p>
+          <div className="flex flex-wrap gap-3">
             {icons.map((Icon, index) => (
               <Icon
                 key={index}
-                className="w-auto h-6 cursor-pointer transition-all duration-200 ease-in-out hover:scale-140 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-115"
+                className="w-auto h-7 cursor-pointer transition-all duration-200 ease-in-out hover:scale-140 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-115"
               />
             ))}
           </div>
         </div>
-      )}
+        )}
+        </div>
     </div>
   );
 }

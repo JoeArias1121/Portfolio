@@ -20,8 +20,8 @@ export default function Projects() {
     <>
       <p className="text-4xl mt-5">Projects</p>
       <div className="border-t w-full my-3 bg-amber-500 border-white" />
+      <div className="flex flex-col gap-y-5">
       <Project
-        className="pb-3"
         name={"Notaibly"}
         description={
           "Web app for users to take notes on and have AI summarize their notes using the OpenAI API"
@@ -44,7 +44,6 @@ export default function Projects() {
         ]}
       />
       <Project
-        className="pb-3"
         name={"Workflow App"}
         description={
           "Facilitates task and project management by allowing users to create tasks for projects and assign them to others"
@@ -57,7 +56,6 @@ export default function Projects() {
         icons={[SiHtml5, SiCss3, SiJavascript, SiPhp, SiMysql]}
       />
       <Project
-        className="pb-3"
         name={"ReTry"}
         description={
           "Is a video game where the user has to jump up onto higher platforms and avoid falling too low. It does have a few twists though!"
@@ -67,7 +65,8 @@ export default function Projects() {
           "Conducted user testing sessions with multiple playtesters to gather feedback on gameplay mechanics, difficulty balance, and overall user experience",
           "Created game assets including level designs, collision systems, and interactive object behaviors to deliver a complete playable experience",
         ]}
-      />
+        />
+        </div>
     </>
   );
 }

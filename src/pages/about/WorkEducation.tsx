@@ -34,7 +34,7 @@ export default function WorkEducation() {
 
   return (
     <>
-      <div className="relative flex items-center bg-gray-700 mb-5 rounded-2xl">
+      <div className="relative flex w-1/2 bg-gray-700 mb-5 rounded-2xl">
         <div
           className={`absolute h-10 rounded-2xl bg-black w-1/2 transition-transform duration-300 ease-in-out ${
             active === "work" ? "translate-x-0" : "translate-x-full"
@@ -42,13 +42,13 @@ export default function WorkEducation() {
         />
 
         <div
-          className="relative z-10 w-1/2 cursor-pointer text-center px-20 py-2 rounded-2xl"
+          className="flex items-center justify-center relative z-10 w-1/2 cursor-pointer py-2 rounded-2xl"
           onClick={() => setActive("work")}
         >
           <p>Work</p>
         </div>
         <div
-          className="relative z-10 w-1/2 cursor-pointer text-center px-20 py-2 rounded-2xl"
+          className="flex items-center justify-center relative z-10 w-1/2 cursor-pointer py-2 rounded-2xl"
           onClick={() => setActive("education")}
         >
           <p>Education</p>
@@ -65,7 +65,7 @@ export default function WorkEducation() {
           }`}
         >
           <div className="w-1/2">
-            <div ref={workRef} className="p-5">
+            <div ref={workRef} className="flex flex-col gap-5 p-5">
               <Experience
                 title={"Software Engineer Intern"}
                 company={"Phoenix Bioinformatics"}

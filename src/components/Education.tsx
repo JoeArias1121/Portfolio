@@ -1,23 +1,22 @@
 type Props = {
   className?: string;
-  eduRef?: React.Ref<HTMLDivElement | null>;
 }
 
-export default function Education({className = "", eduRef = null}: Props) {
+export default function Education({className = ""}: Props) {
   return (
-    <div ref={ eduRef } className={`flex flex-col w-1/1 ${className}`}>
-      <div className="flex justify-between py-2">
+    <div className={`flex flex-col w-1/1 ${className}`}>
+      <div className="flex flex-col xl:flex-row xl:justify-between">
         <div className="flex flex-col items-start">
-          <p className="text-2xl">State University of New York at New Paltz</p>
-          <p className="text-xl">Bachelor of Science in Computer Science</p>
+          <p className="text-xl">State University of New York at New Paltz</p>
+          <p className="text-lg font-bold">Bachelor of Science in Computer Science</p>
         </div>
         <p>Aug 2021 - Dec 2024</p>
       </div>
       <div>
-        <p>GPA: 3.65/4.00</p>
-        <p>Honors: Dean's List, AC^2 Outstanding Scholar Award</p>
+        <p><strong>GPA:</strong> 3.65/4.00</p>
+        <p><strong>Honors:</strong> Dean's List, AC^2 Outstanding Scholar Award</p>
         <p>
-          Coursework: Data Structures, Algorithms, Operating Systems, Web Server
+          <strong>Coursework:</strong> Data Structures, Algorithms, Operating Systems, Web Server
           Programming, Language Processing, Software Engineering
         </p>
       </div>
