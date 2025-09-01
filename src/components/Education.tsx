@@ -12,7 +12,7 @@ export default function Education({className = ""}: Props) {
         </div>
         <p>Aug 2021 - Dec 2024</p>
       </div>
-      <div>
+      <div className="ml-3 mt-1">
         <p><strong>GPA:</strong> 3.65/4.00</p>
         <p><strong>Honors:</strong> Dean's List, AC^2 Outstanding Scholar Award</p>
         <p>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import {
@@ -15,22 +15,18 @@ export default function WorkEducation() {
   const eduRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<string>("0px");
 
-  useEffect(() => {
-    const el = workRef.current;
-    if (el) {
-      setHeight(el.scrollHeight + "px");
-      console.log(el.scrollHeight + "px");
-    }
-  }, []);
-
-  useEffect(() => {
-    console.log("active changed to", active);
+  const updateHeight = useCallback(() => {
     const el = active === "work" ? workRef.current : eduRef.current;
     if (el) {
       setHeight(el.scrollHeight + "px");
-      console.log(el.scrollHeight + "px");
     }
   }, [active]);
+
+  useEffect(() => {
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [updateHeight]);
 
   return (
     <>

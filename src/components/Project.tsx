@@ -40,7 +40,7 @@ export default function Project({
               {icons.map((Icon, index) => (
                 <Icon
                   key={index}
-                  className="w-auto h-7 cursor-pointer transition-all duration-200 ease-in-out hover:scale-140 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-115"
+                  className="w-auto h-7 cursor-pointer transition-all duration-200 ease-in-out hover:scale-125 hover:drop-shadow-[0_0_1.65rem_rgba(1,255,1,1)]  active:scale-95"
                 />
               ))}
             </div>
